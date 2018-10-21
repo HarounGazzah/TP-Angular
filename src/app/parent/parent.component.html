@@ -1,0 +1,8 @@
+<div class="container" >
+  <br>
+<b>Parent Component</b>
+<input type="number" #pcomp (keyup)="0" > € <br>
+Value of child component <b>{{ CData / p }}</b> DT
+<hr>
+<app-child [pData]="pcomp.value" (childEvent)="CData=$event"></app-child>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>List of users</h1>
+
+    <form (ngSubmit)="addUser(user)" >
+      <b>First Name</b>
+      <input type="text"class="form-control" name="fname" [(ngModel)]="user.fname"><br>
+      <b>Last Name</b>
+      <input type="text" class="form-control" name="lname" [(ngModel)]="user.lname"><br>
+      <b>Email</b>
+      <input type="text" class="form-control" name="email" [(ngModel)]="user.email"><br>
+      <input type="submit" class="btn-primary" value="Add User">
+    </form>
+
+  <table class="table-striped">
+    <tr >
+      <td><h4>First Name</h4></td>
+      <td><h4>Last Name</h4></td>
+      <td><h4>Email</h4></td>
+    </tr>
+    <tr *ngFor="let u of users">
+        <td>{{ u.fname }}</td>
+        <td>{{ u.lname }}</td>
+        <td>{{ u.email }}</td>
+    </tr>
+  </table>
+</div>
+<br><br><br>
